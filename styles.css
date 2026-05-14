@@ -705,3 +705,101 @@ h3 { font-size: var(--step-1); line-height: 1.1; letter-spacing: -.025em; }
   .eyebrow { margin-top: 6px; }
   .mobile-cta { bottom: 12px; }
 }
+
+
+/* Morty rescue pass — calm professional studio landing, not a poster. */
+.preloader { display: none !important; }
+.cursor, .grain { display: none !important; }
+body { background: #09070d; }
+.site-header { background: rgba(9,7,13,.82); }
+.hero.section {
+  min-height: auto !important;
+  padding-top: clamp(112px, 10vh, 140px) !important;
+  padding-bottom: clamp(56px, 7vh, 88px) !important;
+  grid-template-columns: minmax(0, .92fr) minmax(360px, .72fr) !important;
+  align-items: center !important;
+  gap: clamp(32px, 5vw, 72px) !important;
+}
+.hero h1 {
+  font-size: clamp(3.25rem, 5.8vw, 5.6rem) !important;
+  line-height: .98 !important;
+  letter-spacing: -.055em !important;
+  max-width: 12ch !important;
+  text-transform: none !important;
+  margin-bottom: 22px !important;
+}
+.hero__lead { font-size: clamp(1.08rem, 1.35vw, 1.32rem) !important; line-height: 1.55 !important; color: #ece7f5 !important; max-width: 640px !important; }
+.hero__badges { margin: 22px 0 24px !important; }
+.hero__badges span { font-size: 14px !important; color: #f8f5ff !important; background: rgba(255,255,255,.085) !important; }
+.hero__actions { gap: 12px !important; margin: 24px 0 14px !important; }
+.btn { min-height: 52px !important; padding: 0 20px !important; }
+.hero__note { max-width: 560px !important; color: #cfc8dd !important; }
+.hero__visual { min-height: clamp(360px, 36vw, 520px) !important; }
+.studio-card { border-radius: 26px !important; transform: none !important; }
+.studio-card--main { inset: 0 !important; width: 100% !important; height: clamp(330px, 34vw, 500px) !important; }
+.studio-card--float { width: clamp(155px, 15vw, 230px) !important; height: clamp(132px, 13vw, 200px) !important; right: -10px !important; bottom: -12px !important; }
+.plugin-panel, .studio-card__scan, .hero__bg-orb { display: none !important; }
+.ticker { display: none !important; }
+.section { padding-block: clamp(64px, 8vw, 108px) !important; }
+h2, .section-title, .intro__text h2, .final-cta h2 { font-size: clamp(2.1rem, 4vw, 4rem) !important; line-height: 1.05 !important; }
+.section-head { margin-bottom: 28px !important; }
+.work-grid, .service-grid, .package-grid { gap: 16px !important; }
+@media (max-width: 1050px) {
+  .hero.section { grid-template-columns: 1fr !important; padding-top: 108px !important; }
+  .hero h1 { font-size: clamp(2.85rem, 8vw, 4.8rem) !important; }
+  .hero__visual { min-height: 390px !important; max-width: 720px; }
+  .header-cta { display: none; }
+}
+@media (max-width: 720px) {
+  body { padding-bottom: 92px !important; }
+  .site-header { border-radius: 20px !important; }
+  .hero.section { padding-top: 104px !important; padding-bottom: 44px !important; gap: 24px !important; }
+  .hero h1 { font-size: clamp(2.35rem, 10.2vw, 3.35rem) !important; line-height: 1.02 !important; max-width: 11ch !important; }
+  .hero__lead { font-size: 17px !important; line-height: 1.52 !important; }
+  .hero__badges span { font-size: 13px !important; }
+  .hero__actions { display: grid !important; grid-template-columns: 1fr !important; }
+  .hero__actions .btn { width: 100% !important; }
+  .hero__visual { min-height: 282px !important; }
+  .studio-card--main { height: 255px !important; }
+  .studio-card--float { width: 118px !important; height: 102px !important; right: 8px !important; bottom: -8px !important; }
+  .mobile-cta { grid-template-columns: 1fr 1fr !important; }
+  .mobile-cta a:nth-child(3) { display: none !important; }
+  h2, .section-title, .intro__text h2, .final-cta h2 { font-size: clamp(1.85rem, 8vw, 2.65rem) !important; }
+}
+
+/* Full page commercial polish: keep density under control. */
+.intro { max-width: 1040px !important; }
+.intro__grid article, .work-card, .service-card, .package-card, .calc-panel, .reviews__card, .faq-list details {
+  box-shadow: 0 18px 70px rgba(0,0,0,.24) !important;
+}
+.service-grid { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; }
+.service-card { min-height: 300px !important; }
+.process-steps article { background: rgba(255,255,255,.055) !important; border: 1px solid rgba(255,255,255,.12) !important; border-left: 3px solid var(--red) !important; }
+.gallery img, .process-image img, .studio-card img { filter: saturate(1.04) contrast(1.05) brightness(1.04) !important; }
+.reviews__card { max-width: 900px !important; }
+.faq-list { max-width: 980px; margin-inline: auto; }
+.faq-list summary { font-size: clamp(1.05rem, 1.4vw, 1.28rem) !important; }
+@media (max-width: 1050px) {
+  .service-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  .process-layout { grid-template-columns: 1fr !important; }
+  .process-image { position: relative !important; top: auto !important; }
+}
+@media (max-width: 720px) {
+  .intro__grid, .work-grid, .service-grid, .package-grid { grid-template-columns: 1fr !important; }
+  .section-head p { font-size: 16px !important; }
+  .service-card, .package-card, .work-card { min-height: auto !important; }
+  .service-card__price { margin-top: 18px !important; }
+  .gallery { grid-template-columns: 1fr !important; }
+  .gallery figure { min-height: 220px !important; }
+  .final-cta__inner .hero__actions { display: grid !important; grid-template-columns: 1fr !important; }
+}
+
+@media (max-width: 420px) {
+  .intro__grid span, .work-card p, .service-card p, .package-card li, .calc-panel span, .faq-list p, .review-pills span {
+    font-size: 16px !important;
+    line-height: 1.58 !important;
+    color: #e4deec !important;
+  }
+  .service-card__number, .work-card__top span, .package-card span { font-size: 12px !important; }
+  .calc-panel label { align-items: flex-start !important; }
+}
