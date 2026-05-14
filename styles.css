@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap");
+
 :root {
   --bg: #08060d;
   --bg-2: #100b18;
@@ -527,4 +529,179 @@ p, li, .intro__grid span, .section-lead, .service-card p, .package-card li, .faq
 @media (max-width: 720px) {
   .hero h1 { font-size: clamp(2.25rem, 12.4vw, 3.95rem); }
   .ticker span { font-size: clamp(25px, 9vw, 38px); }
+}
+
+
+/* Design QA pass — fluid desktop/mobile typography based on current responsive clamp patterns. */
+:root {
+  --step--1: clamp(0.88rem, 0.82rem + 0.25vw, 1rem);
+  --step-0: clamp(1rem, 0.94rem + 0.32vw, 1.125rem);
+  --step-1: clamp(1.18rem, 1.06rem + 0.55vw, 1.45rem);
+  --step-2: clamp(1.55rem, 1.2rem + 1.25vw, 2.15rem);
+  --step-3: clamp(2.05rem, 1.36rem + 2.6vw, 3.55rem);
+  --step-4: clamp(2.65rem, 1.4rem + 4.6vw, 5.35rem);
+  --space-section: clamp(4.25rem, 2.8rem + 5vw, 7.5rem);
+  --space-card: clamp(1.15rem, 0.88rem + 1vw, 1.8rem);
+  --container: min(1160px, calc(100vw - clamp(24px, 5vw, 64px)));
+}
+body {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: var(--step-0);
+  text-rendering: geometricPrecision;
+}
+h1, h2, h3, .logo__text, .section-kicker, .eyebrow, .ticker span {
+  font-family: "Space Grotesk", Inter, system-ui, sans-serif;
+}
+p, li, address { font-size: var(--step-0); line-height: 1.62; }
+.section { padding-block: var(--space-section); }
+.hero {
+  min-height: min(900px, 100svh);
+  padding-top: clamp(110px, 13svh, 148px);
+  padding-bottom: clamp(56px, 8svh, 96px);
+  gap: clamp(24px, 4vw, 56px);
+}
+.hero h1 {
+  font-size: var(--step-4) !important;
+  line-height: .94;
+  letter-spacing: -0.055em;
+  max-width: 12ch;
+  text-wrap: balance;
+}
+h2,
+.section-title,
+.intro__text h2,
+.final-cta h2 {
+  font-size: var(--step-3) !important;
+  line-height: .98;
+  letter-spacing: -0.045em;
+  text-wrap: balance;
+}
+h3 { font-size: var(--step-1); line-height: 1.1; letter-spacing: -.025em; }
+.hero__lead { font-size: var(--step-1); max-width: 680px; line-height: 1.48; }
+.hero__note { font-size: var(--step--1); color: #ddd7e8; }
+.eyebrow, .section-kicker { font-size: clamp(.72rem, .68rem + .16vw, .82rem); letter-spacing: .13em; }
+.nav a { color: #d9d2e6; font-weight: 650; }
+.ticker__track { padding-block: clamp(10px, 1.8vw, 16px); }
+.ticker span {
+  font-size: clamp(1.65rem, 3.3vw, 3.65rem) !important;
+  line-height: 1;
+  letter-spacing: -.04em;
+  -webkit-text-stroke: 1px rgba(255,255,255,.46);
+}
+.hero__visual { min-height: clamp(420px, 48vw, 610px); }
+.studio-card--main { height: clamp(340px, 37vw, 470px); }
+.studio-card--float { width: clamp(190px, 23vw, 310px); height: clamp(165px, 20vw, 270px); }
+.plugin-panel { width: clamp(220px, 22vw, 270px); }
+.section-head { align-items: start; grid-template-columns: minmax(0, 1.1fr) minmax(260px, 430px); }
+.section-head p { margin-top: .5rem; color: #d6d0df; }
+.intro p { font-size: var(--step-1); line-height: 1.52; }
+.intro__grid article,
+.work-card,
+.service-card,
+.package-card,
+.calc-panel,
+.reviews__card,
+.faq-list details { padding: var(--space-card); }
+.service-card { min-height: 320px; }
+.service-card__price { font-size: var(--step-1); }
+.package-card h3 { font-size: var(--step-2); }
+.work-card__top { align-items: flex-start; }
+.track-player {
+  width: 100%;
+  margin-top: 14px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.08);
+  filter: hue-rotate(300deg) saturate(1.25);
+}
+.gallery figure { min-height: clamp(260px, 30vw, 390px); }
+.process-image img { height: clamp(390px, 48vw, 620px); }
+.final-cta__inner { text-align: left; }
+.final-cta__inner .hero__actions { justify-content: flex-start; }
+.footer { font-size: var(--step--1); }
+@media (max-width: 1050px) {
+  .hero { min-height: auto; grid-template-columns: 1fr; }
+  .hero h1 { max-width: 13ch; }
+  .section-head { grid-template-columns: 1fr; gap: 14px; }
+  .service-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 720px) {
+  :root { --container: min(100vw - 28px, 1160px); }
+  body { font-size: 16px; }
+  .site-header {
+    width: min(100vw - 20px, 1160px);
+    top: 8px;
+    padding: 9px 10px;
+    border-radius: 22px;
+  }
+  .logo__mark { width: 38px; height: 38px; }
+  .logo__text { font-size: 10px; }
+  .nav-toggle { padding: 10px 12px; font-size: 14px; }
+  .hero {
+    padding-top: 104px;
+    padding-bottom: 42px;
+    gap: 28px;
+  }
+  .hero h1 {
+    font-size: clamp(2.35rem, 11.2vw, 3.65rem) !important;
+    line-height: .96;
+    max-width: 11ch;
+  }
+  h2,
+  .section-title,
+  .intro__text h2,
+  .final-cta h2 {
+    font-size: clamp(2rem, 8.4vw, 3rem) !important;
+    line-height: 1;
+  }
+  .hero__lead, .intro p { font-size: clamp(1.02rem, 3.6vw, 1.18rem); line-height: 1.5; }
+  .hero__badges { gap: 8px; margin: 18px 0; }
+  .hero__badges span { width: auto; font-size: 12px; padding: 8px 10px; }
+  .hero__actions { margin-top: 22px; }
+  .btn { min-height: 50px; padding-inline: 18px; font-size: 15px; }
+  .hero__visual { min-height: 360px; }
+  .studio-card--main { height: 285px; transform: rotate(-1deg); }
+  .studio-card--float { width: 150px; height: 132px; bottom: 14px; right: 8px; }
+  .plugin-panel { display: none; }
+  .ticker span { font-size: clamp(1.45rem, 7vw, 2.25rem) !important; }
+  .section { padding-block: clamp(3.5rem, 12vw, 5rem); }
+  .intro__grid, .work-grid, .service-grid, .package-grid { gap: 14px; }
+  .work-card__top { display: grid; gap: 6px; }
+  .work-card__top strong { text-align: left; }
+  .ab-controls { display: grid; grid-template-columns: repeat(3, 1fr); }
+  .ab-controls button { padding: 9px 6px; font-size: 13px; }
+  .calc-panel label { gap: 8px; }
+  .process-steps article { padding: 18px; }
+  .process-image img { height: 330px; }
+  .gallery figure { min-height: 245px; }
+  .reviews__card, .final-cta__inner { text-align: left; border-radius: 26px; }
+  .footer { padding-bottom: 88px; }
+}
+@media (max-width: 390px) {
+  .hero h1 { font-size: clamp(2.12rem, 10.5vw, 3.25rem) !important; }
+  h2, .section-title, .intro__text h2, .final-cta h2 { font-size: clamp(1.82rem, 8vw, 2.65rem) !important; }
+  .hero__visual { min-height: 325px; }
+  .studio-card--main { height: 255px; }
+  .studio-card--float { width: 132px; height: 118px; }
+}
+
+/* Mobile final pass: fewer first-screen decisions, stronger readability. */
+.preloader.is-hidden { pointer-events: none; }
+@media (max-width: 720px) {
+  p, li, address, .intro__grid span, .service-card p, .package-card li, .faq-list p { font-size: 16px; line-height: 1.6; color: #e0dbea; }
+  .hero__actions .btn:nth-child(3) { display: none; }
+  .mobile-cta { grid-template-columns: 1fr 1fr; padding: 7px; }
+  .mobile-cta a { min-height: 42px; font-size: 14px; }
+  .mobile-cta a:nth-child(3) { display: none; }
+  .hero__visual { margin-top: 8px; min-height: 300px; }
+  .studio-card--main { height: 238px; }
+  .studio-card--float { width: 118px; height: 104px; bottom: 8px; }
+  .section-kicker, .eyebrow { color: #d6ff5a; }
+  .hero__badges span { color: #fff; background: rgba(255,255,255,.09); border-color: rgba(255,255,255,.2); }
+}
+
+@media (max-width: 720px) {
+  body { padding-bottom: 108px; }
+  .hero { padding-top: 128px; }
+  .eyebrow { margin-top: 6px; }
+  .mobile-cta { bottom: 12px; }
 }
