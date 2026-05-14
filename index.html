@@ -1,362 +1,223 @@
 <!doctype html>
-<html lang="ru" class="no-js">
+<html lang="ru">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Студия звукозаписи в Москве | Release Records</title>
-  <meta name="description" content="Release Records — студия звукозаписи в Москве для рэпа, вокала и urban-звучания. Запись, сведение, мастеринг, биты и треки под ключ на Смольной 15." />
-  <meta name="theme-color" content="#09070d" />
-  <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://talesman.pro/" />
+  <title>Студия звукозаписи в Москве — Release Records</title>
+  <meta name="description" content="Release Records — студия звукозаписи в Москве рядом с м. Водный стадион. Запись вокала, сведение, мастеринг, подарочный трек и песня под ключ." />
+  <meta name="theme-color" content="#050507" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Release Records — студия звукозаписи в Москве" />
-  <meta property="og:description" content="Студия звукозаписи в Москве: запись вокала, сведение, мастеринг, биты и песня под ключ." />
-  <meta property="og:image" content="assets/studio-daw-release-records.jpg" />
-  <link rel="preload" as="image" href="assets/studio-daw-release-records.jpg" />
+  <meta property="og:title" content="Студия звукозаписи в Москве — Release Records" />
+  <meta property="og:description" content="Запись вокала, сведение, мастеринг и трек под ключ в Москве. Смольная 15, м. Водный стадион." />
+  <meta property="og:image" content="assets/studio-wide.jpg" />
+  <link rel="canonical" href="https://talesman.pro/" />
   <link rel="stylesheet" href="styles.css" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "RecordingStudio",
+    "@type": ["LocalBusiness", "MusicRecordingStudio"],
     "name": "Release Records",
     "url": "https://talesman.pro/",
-    "telephone": "+7 993 613-16-03",
-    "priceRange": "₽₽",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Смольная улица, 15",
-      "addressLocality": "Москва",
-      "addressCountry": "RU"
-    },
+    "image": "https://talesman.pro/assets/studio-wide.jpg",
+    "telephone": "+79936131603",
+    "address": {"@type":"PostalAddress","streetAddress":"Смольная 15","addressLocality":"Москва","addressCountry":"RU"},
     "areaServed": "Москва",
-    "description": "Студия звукозаписи в Москве для записи вокала, сведения, мастеринга, битов и песен под ключ.",
-    "image": [
-      "assets/studio-daw-release-records.jpg",
-      "assets/mic-blue.jpg",
-      "assets/mic-se-close.jpg"
-    ],
-    "makesOffer": [
-      {"@type":"Offer","name":"Запись вокала","priceSpecification":{"@type":"PriceSpecification","priceCurrency":"RUB","minPrice":"1500"}},
-      {"@type":"Offer","name":"Сведение и мастеринг","priceSpecification":{"@type":"PriceSpecification","priceCurrency":"RUB","minPrice":"3500"}},
-      {"@type":"Offer","name":"Запись + сведение","priceSpecification":{"@type":"PriceSpecification","priceCurrency":"RUB","minPrice":"5000"}}
+    "description": "Студия звукозаписи в Москве: запись вокала, сведение, мастеринг, подарочный трек и песня под ключ.",
+    "priceRange": "₽₽"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"Можно записаться, если я впервые в студии?","acceptedAnswer":{"@type":"Answer","text":"Да. В Release Records помогают с подачей, дублями и спокойным процессом записи даже тем, кто впервые стоит у микрофона."}},
+      {"@type":"Question","name":"Можно сделать подарочный трек на день рождения?","acceptedAnswer":{"@type":"Answer","text":"Да. Можно прийти только с идеей: студия поможет собрать формат, записать вокал и довести трек до готового подарочного звучания."}},
+      {"@type":"Question","name":"Где находится студия?","acceptedAnswer":{"@type":"Answer","text":"Москва, Смольная 15, рядом с метро Водный стадион."}},
+      {"@type":"Question","name":"Что входит в работу под ключ?","acceptedAnswer":{"@type":"Answer","text":"Идея, референсы, запись вокала, помощь с подачей, сведение, мастеринг и финальная версия трека."}}
     ]
   }
   </script>
 </head>
 <body>
-  <div class="preloader" aria-label="Загрузка сайта">
-    <div class="preloader__grid"></div>
-    <div class="preloader__inner">
-      <span class="rec-dot"></span>
-      <span>ARM REC</span>
-      <strong>RELEASE READY</strong>
-      <small>loading session...</small>
-    </div>
-  </div>
-
-  <div class="cursor" aria-hidden="true"><span>REC</span></div>
-  <canvas class="grain" aria-hidden="true"></canvas>
-
-  <header class="site-header" data-header>
-    <a class="logo" href="#top" aria-label="Release Records">
-      <span class="logo__mark">RR</span>
-      <span class="logo__text">Release<br />Records</span>
+  <div class="ambient" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Release Records">
+      <span class="brand-mark">RR</span>
+      <span><b>Release</b> Records</span>
     </a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Меню</button>
-    <nav class="nav" id="main-nav" aria-label="Главное меню">
-      <a href="#works">Работы</a>
+    <nav class="nav" aria-label="Основная навигация">
       <a href="#services">Услуги</a>
-      <a href="#packages">Пакеты</a>
-      <a href="#process">Процесс</a>
-      <a href="#studio">Студия</a>
-      <a href="#contacts">Контакт</a>
+      <a href="#gift">Подарок</a>
+      <a href="#sound">Звук</a>
+      <a href="#faq">FAQ</a>
     </nav>
-    <a class="header-cta magnetic" href="https://wa.me/79936131603?text=Хочу%20записаться%20в%20Release%20Records" target="_blank" rel="noopener">Записаться</a>
+    <a class="header-phone" href="tel:+79936131603">+7 993 613-16-03</a>
   </header>
 
   <main id="top">
-    <section class="hero section" aria-labelledby="hero-title">
-      <div class="hero__bg-orb hero__bg-orb--one"></div>
-      <div class="hero__bg-orb hero__bg-orb--two"></div>
-      <div class="hero__content reveal">
-        <p class="eyebrow"><span class="rec-dot"></span> Москва · Смольная 15 · м. Водный стадион</p>
-        <h1 id="hero-title">Студия звукозаписи в Москве</h1>
-        <p class="hero__lead">Запись вокала, сведение, мастеринг и трек под ключ на Смольной 15. Поможем записать первый дубль, собрать уверенный сингл и подготовить звук к релизу.</p>
-        <div class="hero__badges" aria-label="Ключевые преимущества">
-          <span>запись от 1500 ₽/час</span>
-          <span>м. Водный стадион</span>
-          <span>сведение от 3500 ₽</span>
+    <section class="hero section-shell">
+      <div class="hero-copy">
+        <p class="eyebrow">Москва · Смольная 15 · м. Водный стадион</p>
+        <h1>Студия звукозаписи в Москве</h1>
+        <p class="hero-lead">Запись вокала, сведение, мастеринг и трек под ключ — в тёмной, спокойной студии, где голос не ломают, а собирают в результат.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="tel:+79936131603">Записаться на сессию</a>
+          <a class="btn btn-ghost" href="https://wa.me/79936131603" target="_blank" rel="noopener">Написать в WhatsApp</a>
         </div>
-        <div class="hero__actions">
-          <a class="btn btn--primary magnetic" href="https://wa.me/79936131603?text=Хочу%20записаться%20на%20сессию%20в%20Release%20Records" target="_blank" rel="noopener">Забронировать сессию</a>
-          <a class="btn btn--ghost magnetic" href="#services">Посмотреть услуги</a>
+        <div class="trust-row" aria-label="Ключевые преимущества">
+          <span>Вокал</span>
+          <span>Сведение</span>
+          <span>Мастеринг</span>
+          <span>Песня под ключ</span>
         </div>
-        <p class="hero__note">Приходи с текстом, минусом, демкой или референсом. Если опыта нет — проведём по записи спокойно: темп, подача, дубли, бэки, adlibs и финальная сборка без пафоса.</p>
       </div>
-
-      <div class="hero__visual reveal" data-parallax>
-        <div class="studio-card studio-card--main">
-          <img src="assets/studio-daw-release-records.jpg" alt="Рабочая станция студии звукозаписи Release Records" />
-          <div class="studio-card__scan"></div>
+      <div class="hero-visual" aria-label="Интерьер студии Release Records">
+        <img src="assets/studio-wide.jpg" alt="Студия звукозаписи Release Records в Москве" />
+        <div class="floating-card card-session">
+          <span>REC SESSION</span>
+          <b>Voice → Track</b>
         </div>
-        <div class="studio-card studio-card--float studio-card--mic">
-          <img src="assets/mic-blue.jpg" alt="Микрофон в студии Release Records" />
-        </div>
-        <div class="plugin-panel" aria-hidden="true">
-          <div class="plugin-panel__row"><span>gain</span><b>+6.0</b></div>
-          <div class="plugin-panel__row"><span>tone</span><b>wide</b></div>
-          <div class="plugin-panel__meters"><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="floating-card card-meter">
+          <span>Signal</span>
+          <div class="mini-bars" aria-hidden="true"></div>
         </div>
       </div>
     </section>
 
-    <section class="ticker" aria-label="Услуги студии">
-      <div class="ticker__track">
-        <span>recording</span><span>mixing</span><span>mastering</span><span>beats</span><span>release ready</span><span>adlibs</span><span>vocal tuning</span><span>recording</span><span>mixing</span><span>mastering</span><span>beats</span><span>release ready</span>
-      </div>
+    <section class="proof-strip" aria-label="Позиционирование студии">
+      <p>Не конвейер. Не пафос. Release Records — камерная студия для вокала, личных треков, подарков и релизов, которые хочется включать людям.</p>
     </section>
 
-    <section class="section intro reveal" aria-labelledby="intro-title">
-      <div class="section-kicker">не просто rec</div>
-      <h2 id="intro-title">Из идеи, текста и дублей собираем трек, который можно показывать</h2>
-      <p>Задача студии — не просто нажать REC. Важно понять артиста, подобрать подачу, не потерять эмоцию, собрать сильные дубли и сделать вокал читаемым на телефоне, в машине, на колонках и в наушниках.</p>
-      <div class="intro__grid">
-        <article><strong>Для первого трека</strong><span>Разберём текст, темп, подачу и запишем несколько уверенных дублей без стресса у микрофона.</span></article>
-        <article><strong>Для релиза</strong><span>Чистка, тюнинг, эффекты, баланс с минусом, громкость и финальный мастер для площадок и соцсетей.</span></article>
-        <article><strong>Для артистов</strong><span>Помогаем держать единый звук, структуру релизов и рабочий процесс от демки до публикации.</span></article>
-      </div>
-    </section>
-
-    <section class="section works" id="works" aria-labelledby="works-title">
-      <div class="section-head reveal">
-        <div>
-          <div class="section-kicker">портфолио</div>
-          <h2 id="works-title">Что можно сделать в студии</h2>
-        </div>
-        <p>Три типовых задачи: записать вокал, довести готовый материал или собрать трек под ключ. Если сомневаешься, начнём с короткой консультации по демке.</p>
-      </div>
-      <div class="work-grid">
-        <article class="work-card reveal" data-demo="melodic">
-          <div class="work-card__top"><span>Melodic Rap</span><strong>вокал + сведение</strong></div>
-          <canvas class="waveform" height="120" data-mode="after"></canvas>
-          <p>Голос становится ближе, шире и плотнее, но остаётся живым — без пластиковой переглаженности.</p>
-          <audio class="track-player" controls preload="metadata" src="assets/tale-track.mp3">Ваш браузер не поддерживает аудио.</audio>
-          <div class="ab-controls" role="group" aria-label="Переключить пример">
-            <button type="button" data-mode="before">До</button>
-            <button type="button" data-mode="after" class="is-active">После</button>
-            <button type="button" data-mode="master">Мастер</button>
-          </div>
-        </article>
-        <article class="work-card reveal" data-demo="trap">
-          <div class="work-card__top"><span>Trap / Drill</span><strong>запись + мастер</strong></div>
-          <canvas class="waveform" height="120" data-mode="after"></canvas>
-          <p>Подача остаётся агрессивной, низ не разваливается, а слова не тонут в бите.</p>
-          <div class="ab-controls" role="group" aria-label="Переключить пример">
-            <button type="button" data-mode="before">До</button>
-            <button type="button" data-mode="after" class="is-active">После</button>
-            <button type="button" data-mode="master">Мастер</button>
-          </div>
-        </article>
-        <article class="work-card reveal" data-demo="poprap">
-          <div class="work-card__top"><span>Pop Rap</span><strong>трек под ключ</strong></div>
-          <canvas class="waveform" height="120" data-mode="after"></canvas>
-          <p>Помогаем собрать форму: куплет, припев, хуки, бэки, переходы и финальный вайб.</p>
-          <div class="ab-controls" role="group" aria-label="Переключить пример">
-            <button type="button" data-mode="before">До</button>
-            <button type="button" data-mode="after" class="is-active">После</button>
-            <button type="button" data-mode="master">Мастер</button>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section services" id="services" aria-labelledby="services-title">
-      <div class="section-head reveal">
-        <div>
-          <div class="section-kicker">услуги и цены</div>
-          <h2 id="services-title">От одной записи до готового релиза</h2>
-        </div>
-        <p>Цены ниже — стартовые ориентиры. Точная стоимость зависит от задачи: только запись, запись со сведением, онлайн-сведение, бит или трек под ключ.</p>
+    <section id="services" class="section-shell services-section">
+      <div class="section-head">
+        <p class="eyebrow">services</p>
+        <h2>От идеи до готового звучания</h2>
+        <p>Можно прийти с демкой, текстом, минусом, голосовым сообщением или просто поводом. Дальше поможем собрать форму и записать результат.</p>
       </div>
       <div class="service-grid">
-        <article class="service-card reveal">
-          <span class="service-card__number">01</span>
+        <article class="service-card featured">
+          <span class="service-num">01</span>
           <h3>Запись вокала</h3>
-          <p>Рэп, trap, drill, melodic rap, pop, R&B, каверы и демо. Настроим микрофон, запишем дубли, бэки и adlibs, поможем с уверенностью в подаче.</p>
-          <div class="service-card__price">от 1500 ₽/час</div>
-          <a href="https://wa.me/79936131603?text=Хочу%20записать%20вокал" target="_blank" rel="noopener">Записаться</a>
+          <p>Настраиваем сессию, подачу, дубли и комфорт у микрофона. Особенно важно, если человек записывается впервые.</p>
         </article>
-        <article class="service-card reveal">
-          <span class="service-card__number">02</span>
-          <h3>Сведение / мастеринг</h3>
-          <p>Чистим вокал, выравниваем динамику, добавляем тюнинг по задаче, пространство, плотность, громкость и мастер-версию для публикации.</p>
-          <div class="service-card__price">от 3500 ₽</div>
-          <a href="https://wa.me/79936131603?text=Хочу%20отправить%20трек%20на%20сведение" target="_blank" rel="noopener">Отправить трек</a>
+        <article class="service-card">
+          <span class="service-num">02</span>
+          <h3>Сведение</h3>
+          <p>Баланс, пространство, вокальная посадка, эффекты и плотность без ощущения пластиковой обработки.</p>
         </article>
-        <article class="service-card reveal">
-          <span class="service-card__number">03</span>
-          <h3>Запись + сведение</h3>
-          <p>Приходишь с минусом и текстом. Записываем вокал, выбираем сильные дубли, собираем обработанную версию и готовим файл для релиза.</p>
-          <div class="service-card__price">от 5000 ₽</div>
-          <a href="https://wa.me/79936131603?text=Хочу%20запись%20плюс%20сведение" target="_blank" rel="noopener">Обсудить</a>
+        <article class="service-card">
+          <span class="service-num">03</span>
+          <h3>Мастеринг</h3>
+          <p>Финальная громкость, читаемость и переводимость трека для телефона, машины, колонок и площадок.</p>
         </article>
-        <article class="service-card reveal">
-          <span class="service-card__number">04</span>
-          <h3>Бит / трек под ключ</h3>
-          <p>Бит, бит или аранжировка под референс, структура песни, запись, сведение, мастеринг и финальный WAV/MP3. Подходит, когда есть идея или референс, но нужен готовый трек.</p>
-          <div class="service-card__price">от 3500 ₽</div>
-          <a href="https://wa.me/79936131603?text=Хочу%20бит%20или%20трек%20под%20ключ" target="_blank" rel="noopener">Заказать</a>
-        </article>
-      </div>
-    </section>
-
-    <section class="section packages" id="packages" aria-labelledby="packages-title">
-      <div class="section-head reveal">
-        <div>
-          <div class="section-kicker">пакеты</div>
-          <h2 id="packages-title">Форматы записи и продакшена</h2>
-        </div>
-      </div>
-      <div class="package-grid">
-        <article class="package-card reveal">
-          <span>START</span>
-          <h3>Первая запись</h3>
-          <p>Для первого визита, демо или проверки идеи перед полноценным треком.</p>
-          <ul>
-            <li>настройка микрофона и мониторинга</li>
-            <li>запись дублей, бэков и adlibs</li>
-            <li>чистый вокальный файл или rough mix</li>
-          </ul>
-        </article>
-        <article class="package-card package-card--hot reveal">
-          <span>SINGLE</span>
-          <h3>Трек под минус</h3>
-          <p>Для артиста, у которого уже есть текст и минус, но нужен уверенный релизный звук.</p>
-          <ul>
-            <li>запись вокала</li>
-            <li>компинг сильных дублей</li>
-            <li>сведение, мастеринг и финальный WAV/MP3</li>
-          </ul>
-        </article>
-        <article class="package-card reveal">
-          <span>RELEASE</span>
+        <article class="service-card">
+          <span class="service-num">04</span>
           <h3>Трек под ключ</h3>
-          <p>Для задачи “есть идея/референс — нужен готовый трек”.</p>
-          <ul>
-            <li>бит или аранжировка под референс</li>
-            <li>запись вокала и работа с подачей</li>
-            <li>мастер для площадок и соцсетей</li>
-          </ul>
+          <p>Идея, текстовая структура, запись, сведение и финальная версия — когда нужен подарок или релиз без хаоса.</p>
         </article>
       </div>
     </section>
 
-    <section class="section calculator" id="calculator" aria-labelledby="calculator-title">
-      <div class="calculator__copy reveal">
-        <div class="section-kicker">калькулятор</div>
-        <h2 id="calculator-title">Быстрый расчёт перед записью</h2>
-        <p>Калькулятор нужен, чтобы быстро понять порядок бюджета. Точную стоимость лучше обсудить в WhatsApp: скинь демку, минус, текст или опиши задачу.</p>
-      </div>
-      <form class="calc-panel reveal" data-calculator>
-        <label><input type="checkbox" name="service" value="1500" data-label="Запись вокала" checked /> Запись вокала <span>от 1500 ₽</span></label>
-        <label><input type="checkbox" name="service" value="3500" data-label="Сведение / мастеринг" /> Сведение / мастеринг <span>от 3500 ₽</span></label>
-        <label><input type="checkbox" name="service" value="3500" data-label="Бит / бит или аранжировка под референс" /> Бит / бит или аранжировка под референс <span>от 3500 ₽</span></label>
-        <label><input type="checkbox" name="service" value="0" data-label="Песня под ключ" /> Песня под ключ <span>расчёт индивидуально</span></label>
-        <div class="calc-panel__result">
-          <span>Ориентир</span>
-          <strong data-total>от 1500 ₽</strong>
-        </div>
-        <a class="btn btn--primary magnetic" data-calc-link href="https://wa.me/79936131603?text=Хочу%20рассчитать%20трек" target="_blank" rel="noopener">Отправить заявку</a>
-      </form>
-    </section>
-
-    <section class="section process" id="process" aria-labelledby="process-title">
-      <div class="section-head reveal">
+    <section class="studio-gallery section-shell" id="studio">
+      <div class="gallery-card wide">
+        <img src="assets/studio-daw-release-records.jpg" alt="Рабочая станция и контрольная комната Release Records" />
         <div>
-          <div class="section-kicker">процесс</div>
-          <h2 id="process-title">Как проходит сессия</h2>
+          <p class="eyebrow">control room</p>
+          <h2>Комната, где демка становится треком</h2>
         </div>
       </div>
-      <div class="process-layout">
-        <div class="process-steps reveal">
-          <article><span>01</span><h3>Приносишь материал</h3><p>Приносишь текст, минус, демку, референсы или голосовую идею. Перед записью разбираем темп, настроение и цель трека.</p></article>
-          <article><span>02</span><h3>Настраиваем звук</h3><p>Настраиваем микрофон, уровень, мониторинг и комфорт. Ты слышишь себя нормально и не воюешь с техникой.</p></article>
-          <article><span>03</span><h3>Пишем дубли</h3><p>Пишем куплеты, припевы, adlibs и бэки. Собираем сильные тейки, а не заставляем тебя идеально прожить трек с одного дубля.</p></article>
-          <article><span>04</span><h3>Доводим до релиза</h3><p>После записи доводим вокал, баланс, эффекты и громкость. На выходе — понятная версия для публикации или дальнейшей работы.</p></article>
+      <div class="gallery-card">
+        <img src="assets/mic-close-blue.jpg" alt="Студийный микрофон крупным планом" />
+      </div>
+      <div class="gallery-card text-card">
+        <p class="eyebrow">for first timers</p>
+        <h3>Не надо быть “готовым артистом”</h3>
+        <p>Нормально волноваться, сбиваться и не знать студийных слов. Здесь процесс объясняют человеческим языком.</p>
+      </div>
+    </section>
+
+    <section id="gift" class="gift-section section-shell">
+      <div class="gift-copy">
+        <p class="eyebrow">birthday / personal track</p>
+        <h2>Подарок, который не теряется среди вещей</h2>
+        <p>Трек для друга — это способ сказать важное без неловкого тоста. Сохранить общий смех, голос, настроение и историю в одном файле.</p>
+        <p>Если хочется поздравление с душой, но без приторности — формат подарочного трека подходит идеально.</p>
+      </div>
+      <div class="process-list">
+        <article><span>1</span><b>Пишете идею</b><p>Кому подарок, какой повод, что хочется сказать.</p></article>
+        <article><span>2</span><b>Собираем форму</b><p>Стиль, референсы, текст, структура и настроение.</p></article>
+        <article><span>3</span><b>Записываем</b><p>Вокал, дубли, подача, спокойная работа в студии.</p></article>
+        <article><span>4</span><b>Отдаём финал</b><p>Готовый трек в аккуратном звучании.</p></article>
+      </div>
+    </section>
+
+    <section id="sound" class="sound-section section-shell">
+      <div class="sound-panel">
+        <div class="sound-copy">
+          <p class="eyebrow">listen</p>
+          <h2>Звук должен продавать студию раньше текста</h2>
+          <p>На сайте есть реальный аудио-слот. Без фейковых “кейсов” и пустых обещаний: включил — понял атмосферу.</p>
         </div>
-        <div class="process-image reveal">
-          <img src="assets/mic-se-close.jpg" alt="Крупный план студийного микрофона Release Records" />
-          <div class="process-image__label">vocal chain armed</div>
+        <div class="player-card">
+          <div class="player-top">
+            <button class="play-button" type="button" aria-label="Включить пример" id="playToggle">▶</button>
+            <div>
+              <b>TALE track</b>
+              <span>Release Records sample</span>
+            </div>
+          </div>
+          <div class="wave" aria-hidden="true"></div>
+          <audio id="audio" preload="metadata" src="assets/tale-track.mp3"></audio>
         </div>
       </div>
     </section>
 
-    <section class="section studio" id="studio" aria-labelledby="studio-title">
-      <div class="section-head reveal">
-        <div>
-          <div class="section-kicker">студия</div>
-          <h2 id="studio-title">Студия на Смольной: запись без лишнего давления</h2>
-        </div>
-        <p>Внутри — рабочая комната для записи вокала и продакшена: микрофон, мониторинг, DAW, свет, тишина и нормальная человеческая атмосфера. Не музей железа и не кабинет экзаменатора.</p>
+    <section class="pricing section-shell" id="formats">
+      <div class="section-head compact">
+        <p class="eyebrow">formats</p>
+        <h2>Форматы без лишней магии</h2>
       </div>
-      <div class="gallery">
-        <figure class="reveal"><img src="assets/studio-daw-release-records.jpg" alt="Рабочая станция Release Records" /><figcaption>Рабочая зона</figcaption></figure>
-        <figure class="reveal"><img src="assets/mic-blue.jpg" alt="Микрофон в синем свете" /><figcaption>Вокальная запись</figcaption></figure>
-        <figure class="reveal"><img src="assets/mic-se-close.jpg" alt="Студийный микрофон крупным планом" /><figcaption>Контроль подачи</figcaption></figure>
+      <div class="format-grid">
+        <article><h3>Старт</h3><p>Для первого опыта, короткой записи, вокала или идеи, которую нужно аккуратно зафиксировать.</p></article>
+        <article><h3>Подарочный трек</h3><p>Для дня рождения, личной истории и поздравления, которое звучит взросло, а не как шаблон.</p></article>
+        <article><h3>Под ключ</h3><p>Для задачи “хочу готовый результат”: идея, запись, сведение, мастеринг, финальная версия.</p></article>
       </div>
     </section>
 
-    <section class="section reviews" aria-labelledby="reviews-title">
-      <div class="reviews__card reveal">
-        <div class="section-kicker">карты и отзывы</div>
-        <h2 id="reviews-title">Запись, маршрут и связь — без лишних квестов</h2>
-        <p>Студия находится на Смольной 15 рядом с м. Водный стадион. Для записи лучше написать заранее: подберём время, уточним задачу и скажем, сколько часов заложить.</p>
-        <div class="review-pills"><span>Смольная 15</span><span>м. Водный стадион</span><span>WhatsApp</span><span>Запись по времени</span></div>
+    <section id="faq" class="faq section-shell">
+      <div class="section-head compact">
+        <p class="eyebrow">FAQ</p>
+        <h2>Частые вопросы</h2>
+      </div>
+      <div class="faq-grid">
+        <details open><summary>Если я не умею петь — подойдёт?</summary><p>Да. Студия работает и с теми, кто записывается впервые. Помогают с дублями, подачей и спокойным темпом.</p></details>
+        <details><summary>Можно прийти только с идеей?</summary><p>Да. Идея, повод или референс — уже достаточно, чтобы обсудить формат.</p></details>
+        <details><summary>Можно сделать быстро?</summary><p>Срочные задачи обсуждаются. Лучше написать заранее, но если дедлайн близко — стоит позвонить и проверить окно.</p></details>
+        <details><summary>Где находится студия?</summary><p>Москва, Смольная 15, рядом с метро Водный стадион.</p></details>
       </div>
     </section>
 
-    <section class="section faq" aria-labelledby="faq-title">
-      <div class="section-head reveal">
-        <div>
-          <div class="section-kicker">faq</div>
-          <h2 id="faq-title">Что важно знать перед записью</h2>
-        </div>
+    <section class="final-cta section-shell" id="contact">
+      <div>
+        <p class="eyebrow">booking</p>
+        <h2>Готовы записать трек?</h2>
+        <p>Позвоните или напишите — вам предложат формат под голос, повод, срок и бюджет.</p>
       </div>
-      <div class="faq-list reveal">
-        <details open><summary>Можно прийти без опыта?</summary><p>Да. Это нормальная ситуация. Поможем с расстоянием до микрофона, дублями, подачей и структурой записи.</p></details>
-        <details><summary>Что взять с собой?</summary><p>Текст, минус, демку и 2–3 референса по звуку. Если есть стемы, проект или черновой вокал — тоже скидывай.</p></details>
-        <details><summary>Сколько часов нужно на трек?</summary><p>На простой вокал может хватить часа. На полноценный трек лучше закладывать 2–3 часа, особенно если это первая запись.</p></details>
-        <details><summary>Можно записаться ночью?</summary><p>Да, по предварительной записи. Лучше написать заранее и согласовать удобное окно.</p></details>
-        <details><summary>Вы делаете сведение онлайн?</summary><p>Да. Отправляешь вокал, минус, стемы и референсы — обсудим задачу, сроки и правки.</p></details>
-      </div>
-    </section>
-
-    <section class="section final-cta" id="contacts" aria-labelledby="contact-title">
-      <div class="final-cta__inner reveal">
-        <div class="section-kicker">бронь сессии</div>
-        <h2 id="contact-title">Запишем трек нормально. Без цирка.</h2>
-        <p>Напиши в WhatsApp, что нужно: запись, сведение, бит, мастеринг или трек под ключ. Если есть демка — кидай сразу, так быстрее поймём задачу.</p>
-        <div class="hero__actions">
-          <a class="btn btn--primary magnetic" href="https://wa.me/79936131603?text=Хочу%20записаться%20в%20Release%20Records" target="_blank" rel="noopener">Написать в WhatsApp</a>
-          <a class="btn btn--ghost magnetic" href="tel:+79936131603">Позвонить</a>
-          <a class="btn btn--ghost magnetic" href="https://yandex.ru/maps/?text=Москва%2C%20Смольная%2015%20Release%20Records" target="_blank" rel="noopener">Построить маршрут</a>
-        </div>
-        <address>Москва, Смольная 15 · м. Водный стадион · +7 993 613-16-03</address>
+      <div class="final-actions">
+        <a class="btn btn-primary" href="tel:+79936131603">+7 993 613-16-03</a>
+        <a class="btn btn-ghost" href="https://wa.me/79936131603" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn btn-ghost" target="_blank" rel="noopener" href="https://yandex.ru/maps/?text=Москва%2C%20Смольная%2015">Карта</a>
       </div>
     </section>
   </main>
 
+  <a class="sticky-cta" href="tel:+79936131603">Записаться</a>
   <footer class="footer">
-    <span>© 2026 Talesman / Release Records</span>
-    <a href="#top">Наверх</a>
+    <span>© 2026 Release Records</span>
+    <span>Москва, Смольная 15 · м. Водный стадион</span>
+    <span>talesman.pro</span>
   </footer>
-
-  <div class="mobile-cta" aria-label="Быстрые действия">
-    <a href="https://wa.me/79936131603?text=Хочу%20записаться%20в%20Release%20Records" target="_blank" rel="noopener">WhatsApp</a>
-    <a href="tel:+79936131603">Позвонить</a>
-    <a href="#services">Цены</a>
-  </div>
-
-  <script src="app.js" defer></script>
+  <script src="app.js"></script>
 </body>
 </html>
