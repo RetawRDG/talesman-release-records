@@ -3,6 +3,16 @@ const playBtn = document.getElementById('playToggle');
 const barsWrap = document.querySelector('.bars');
 const studioVideo = document.querySelector('.video-tile video');
 
+const METRIKA_ID = null; // add real Yandex Metrika counter ID here later
+const GA4_ID = null; // add real GA4 measurement ID here later
+
+function trackGoal(name, params = {}) {
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({ event: name, ...params });
+  if (METRIKA_ID && window.ym) window.ym(METRIKA_ID, 'reachGoal', name, params);
+  if (GA4_ID && window.gtag) window.gtag('event', name, params);
+}
+
 const bars = [];
 if (barsWrap) {
   for (let i = 0; i < 90; i += 1) {
@@ -19,6 +29,8 @@ let analyser;
 let dataArray;
 let source;
 let raf;
+let audioTracked = false;
+let videoTracked = false;
 
 function setPlayState(isPlaying) {
   if (playBtn) playBtn.textContent = isPlaying ? 'Ⅱ' : '▶';
@@ -82,6 +94,10 @@ if (playBtn && audio) {
   });
   audio.addEventListener('play', () => {
     setPlayState(true);
+    if (!audioTracked) {
+      trackGoal('play_audio', { label: 'tale-track' });
+      audioTracked = true;
+    }
     if (!raf) drawBars();
   });
   audio.addEventListener('pause', () => {
@@ -97,5 +113,13 @@ if (playBtn && audio) {
 if (studioVideo) {
   studioVideo.addEventListener('play', () => {
     if (audio && !audio.paused) audio.pause();
+    if (!videoTracked) {
+      trackGoal('play_video', { label: 'studio-session' });
+      videoTracked = true;
+    }
   });
 }
+
+document.querySelectorAll('[data-goal]').forEach((el) => {
+  el.addEventListener('click', () => trackGoal(el.dataset.goal, { href: el.href || '' }));
+});
