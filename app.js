@@ -1,43 +1,5 @@
-const makeBars = (selector, count, tall = 100) => {
-  const el = document.querySelector(selector);
-  if (!el) return;
-  el.innerHTML = Array.from({ length: count }, (_, i) => {
-    const h = 18 + ((i * 37) % tall);
-    const delay = -((i % 17) / 9).toFixed(2);
-    return `<i style="--h:${h}%;animation-delay:${delay}s;animation-duration:${0.9 + (i % 7) * 0.13}s"></i>`;
-  }).join('');
-};
-
-makeBars('.mini-bars', 18, 82);
-makeBars('.wave', 74, 94);
-
-const audio = document.getElementById('audio');
-const play = document.getElementById('playToggle');
-if (audio && play) {
-  play.addEventListener('click', async () => {
-    if (audio.paused) {
-      try { await audio.play(); } catch (_) {}
-    } else {
-      audio.pause();
-    }
-  });
-  audio.addEventListener('play', () => {
-    play.textContent = '❚❚';
-    document.body.classList.add('is-playing');
-  });
-  audio.addEventListener('pause', () => {
-    play.textContent = '▶';
-    document.body.classList.remove('is-playing');
-  });
-}
-
-const io = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) entry.target.classList.add('show');
-  });
-}, { threshold: 0.14 });
-
-document.querySelectorAll('section, .service-card, .gallery-card, .process-list article, .format-grid article, details').forEach(el => {
-  el.classList.add('reveal');
-  io.observe(el);
-});
+const audio=document.getElementById('audio');
+const btn=document.getElementById('playToggle');
+const bars=document.querySelector('.bars');
+if(bars){for(let i=0;i<90;i++){const b=document.createElement('i');b.style.setProperty('--h',`${18+Math.round(Math.abs(Math.sin(i*.61))*52+Math.random()*18)}px`);bars.appendChild(b)}}
+if(btn&&audio){btn.addEventListener('click',async()=>{try{if(audio.paused){await audio.play();btn.textContent='Ⅱ'}else{audio.pause();btn.textContent='▶'}}catch(e){btn.textContent='▶'}});audio.addEventListener('ended',()=>btn.textContent='▶')}

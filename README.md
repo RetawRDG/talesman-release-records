@@ -1,9 +1,9 @@
 # Talesman / RELEASE RECORDS
 
-Real brand-site: musician wing + studio wing.
-
-## Deploy
-Static site. GitHub Pages ready.
+Production static site for `https://talesman.pro/`.
 
 ## Domain
-Recommended from stored project memory: talesman.studio. Budget backups: talesman.pro / talesman.ru after registrar check.
+`CNAME=talesman.pro` — GitHub Pages production repo.
+
+## Current direction
+Kamerная рэп/вокал-студия в Москве: запись, сведение, мастеринг, подарочный трек.
