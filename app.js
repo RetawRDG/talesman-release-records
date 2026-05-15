@@ -5,7 +5,7 @@ const studioVideo = document.querySelector('.video-tile video');
 
 const METRIKA_ID = null; // add real Yandex Metrika counter ID here later
 const GA4_ID = null; // add real GA4 measurement ID here later
-const SUPPORTED_GOALS = ['click_phone', 'click_whatsapp', 'click_map', 'play_audio', 'play_video'];
+const SUPPORTED_GOALS = ['click_phone', 'click_whatsapp', 'click_map', 'click_session_rap', 'click_session_vocal', 'click_session_gift', 'click_session_mix', 'play_audio', 'play_video'];
 
 function trackGoal(name, params = {}) {
   window.dataLayer = window.dataLayer || [];
